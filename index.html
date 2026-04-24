@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arnold Lab Reunion • Celebrating 35 Years of Directed Evolution</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .hero-bg {
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1.5s ease-in-out;
+    }
+    .caltech-orange { color: #FF6C0C; }
+    .warm-bg { background-color: #FFF8F0; }
+   
+    .gallery-img {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    }
+    .speaker-card {
+      transition: all 0.3s ease;
+    }
+    .speaker-card:hover {
+      transform: translateY(-8px);
+    }
+  </style>
+</head>
+<body class="font-sans bg-zinc-50 text-zinc-800">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex justify-between items-center h-16">
+        <div class="font-bold text-xl caltech-orange">Arnold Lab Reunion</div>
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#hero" class="hover:text-[#FF6C0C] transition">Home</a>
+          <a href="#frances" class="hover:text-[#FF6C0C] transition">Frances Arnold</a>
+          <a href="#schedule" class="hover:text-[#FF6C0C] transition">Schedule</a>
+          <a href="#accommodations" class="hover:text-[#FF6C0C] transition">Accommodations</a>
+          <a href="#location" class="hover:text-[#FF6C0C] transition">Location</a>
+          <a href="#program" class="hover:text-[#FF6C0C] transition">Program</a>
+          <a href="#speakers" class="hover:text-[#FF6C0C] transition">Speakers</a>
+          <a href="#gallery" class="hover:text-[#FF6C0C] transition">Gallery</a>
+        </div>
+        <button id="hamburger" class="md:hidden text-3xl text-zinc-700 focus:outline-none">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="px-6 py-6 flex flex-col gap-6 text-lg font-medium">
+        <a href="#hero" class="hover:text-[#FF6C0C]">Home</a>
+        <a href="#frances" class="hover:text-[#FF6C0C]">Frances Arnold</a>
+        <a href="#schedule" class="hover:text-[#FF6C0C]">Schedule</a>
+        <a href="#accommodations" class="hover:text-[#FF6C0C]">Accommodations</a>
+        <a href="#location" class="hover:text-[#FF6C0C]">Location</a>
+        <a href="#program" class="hover:text-[#FF6C0C]">Program</a>
+        <a href="#speakers" class="hover:text-[#FF6C0C]">Speakers</a>
+        <a href="#gallery" class="hover:text-[#FF6C0C]">Gallery</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="hero" class="hero-bg h-screen flex items-center text-white relative">
+    <div class="max-w-6xl mx-auto px-6 text-center z-10">
+      <h1 class="text-5xl md:text-7xl font-bold mb-4 drop-shadow-2xl">Arnold Lab Reunion</h1>
+      <p class="text-3xl md:text-5xl font-light mb-8 drop-shadow-2xl">Celebrating 35 Years of Directed Evolution</p>
+      <a href="#program" class="bg-[#FF6C0C] hover:bg-orange-600 text-white px-10 py-4 rounded-full text-xl font-medium transition inline-block">
+        View Full Program
+      </a>
+      <p class="mt-12 text-lg drop-shadow-lg">July 19–20, 2026 • Caltech Campus, Pasadena</p>
+    </div>
+    <div class="absolute inset-0 bg-black/25"></div>
+  </header>
+
+  <!-- Frances Arnold Section -->
+  <section id="frances" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-5xl font-bold caltech-orange mb-4">Frances Arnold</h2>
+      </div>
+     
+      <div class="flex flex-col items-center">
+                     <div class="max-w-2xl overflow-hidden rounded-3xl shadow-xl">
+          <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/Frances%20Arnold%20Caltech%20by%20christopher%20michel%2020763911-5-21%20.jpg"
+               alt="Frances Arnold" class="w-full h-auto object-cover">
+        </div>
+        <div class="mt-8 text-center">
+          <p class="text-3xl italic text-zinc-700 leading-relaxed">
+            “Frances has been at Caltech forever”
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section id="schedule" class="py-20 warm-bg">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12 caltech-orange">Event Schedule</h2>
+      <div class="space-y-12">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 flex items-center gap-3">
+            <span class="text-[#FF6C0C]">Sunday, July 19</span>
+          </h3>
+          <div class="bg-white rounded-2xl shadow p-8">
+            <p class="text-xl font-medium">Party in Dabney Hall</p>
+            <p class="text-zinc-600 mt-2">Casual celebration with food, drinks, and lab stories. All are welcome to reconnect after 35 incredible years.</p>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 flex items-center gap-3">
+            <a href="#program" class="text-[#FF6C0C] hover:underline flex items-center gap-2">
+              Monday, July 20 <span class="text-sm">(click for detailed program)</span>
+            </a>
+          </h3>
+          <div class="bg-white rounded-2xl shadow p-8 space-y-6">
+            <div>
+              <p class="font-medium">Symposium & Dinner Reception</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accommodations -->
+  <section id="accommodations" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4 caltech-orange">Accommodations</h2>
+      <p class="text-center text-zinc-600 mb-12">Convenient options near the Caltech campus</p>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white border border-zinc-200 rounded-3xl p-8 shadow">
+          <h3 class="font-semibold text-2xl mb-3">Saga Motor Hotel <span class="text-sm font-normal text-amber-600">(Top choice for visitors)</span></h3>
+          <p class="text-zinc-600 mb-4">Popular mid-century motel on Route 66, about 0.8 miles from campus (easy walk or short ride). Features a large outdoor pool and garden courtyard.</p>
+          <p class="font-mono text-sm">1633 E Colorado Blvd, Pasadena, CA 91106</p>
+          <p class="mt-3">
+            <a href="tel:+16267950431" class="text-[#FF6C0C] hover:underline">+1 626 795 0431</a>
+          </p>
+        </div>
+        <div class="bg-amber-50 border border-amber-200 rounded-3xl p-8">
+          <h3 class="font-semibold text-2xl mb-3">The Atheneum</h3>
+          <p class="text-zinc-700 mb-4">Rooms have been blocked specifically for the Arnold Lab Reunion.</p>
+          <p class="font-mono text-lg mb-1">+1 626 395 8200</p>
+          <p class="text-sm text-zinc-600">Please mention <strong>“Arnold Lab Reunion”</strong> when booking.</p>
+        </div>
+      </div>
+      <div class="mt-12 text-center text-sm text-zinc-500">
+        Other nearby options: Pasadena Hotel, Hilton Pasadena, The Langham Huntington (luxury option), and more.
+        Let us know if you need additional recommendations.
+      </div>
+    </div>
+  </section>
+<!-- Location -->
+<section id="location" class="py-20 warm-bg">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-4 caltech-orange">Location</h2>
+    <p class="text-center text-xl mb-12">Caltech Campus, Pasadena, California</p>
+    
+    <div class="max-w-3xl mx-auto">
+      <h3 class="font-semibold text-2xl mb-6">Main Venues</h3>
+      <ul class="space-y-6">
+        <li class="flex gap-4">
+          <span class="text-3xl">📍</span>
+          <div>
+            <p class="font-medium">Dabney Hall (Building 40)</p>
+            <p class="text-zinc-600">Primary venue for the Sunday party, Monday happy hour, and dinner reception.</p>
+          </div>
+        </li>
+        <li class="flex gap-4">
+          <span class="text-3xl">📍</span>
+          <div>
+            <p class="font-medium">Noyes 153 (Noyes Laboratory, Building 72)</p>
+            <p class="text-zinc-600">Scientific talks on Monday, July 20.</p>
+          </div>
+        </li>
+      </ul>
+
+      <div class="mt-10 text-center">
+        <a href="https://www.caltech.edu/map/campus" target="_blank"
+           class="inline-flex items-center gap-2 bg-white border border-zinc-300 hover:border-[#FF6C0C] px-6 py-3 rounded-2xl transition text-sm font-medium">
+          <i class="fas fa-map"></i>
+          Open Interactive Campus Map
+        </a>
+        <p class="mt-4 text-zinc-600 text-sm">
+          Tip: On the map, search for <strong>“Dabney Hall”</strong> or <strong>Building 40</strong>, and <strong>“Noyes Laboratory”</strong> or <strong>Building 72</strong>.
+        </p>
+      </div>
+
+      <!-- Labeled campus map placeholder – replace the src with your best labeled screenshot or a direct image of the official map -->
+      <div class="mt-12 rounded-3xl overflow-hidden shadow-xl">
+        <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/20260416_map_screenshot.jpg"
+             alt="Caltech Campus Map with Dabney Hall (40) and Noyes Laboratory (72) labeled"
+             class="w-full h-auto">
+        <p class="text-center text-xs text-zinc-500 mt-2">Dabney Hall with Garden of Associates (Building 40) and Noyes Laboratory (Building 72)</p>
+      </div>
+<div class="mt-10 bg-white rounded-3xl p-8 shadow">
+  <h3 class="font-semibold text-xl mb-4 flex items-center gap-2">
+    <i class="fas fa-car text-[#FF6C0C]"></i> Parking on Campus
+  </h3>
+  <ul class="space-y-3 text-zinc-600">
+    <li class="flex gap-3">
+      <span class="text-[#FF6C0C] mt-1">•</span>
+      <span><strong>Free parking:</strong> Weekends (Sunday) and after 5:00 p.m. weekdays in unreserved stalls.</span>
+    </li>
+    <li class="flex gap-3">
+      <span class="text-[#FF6C0C] mt-1">•</span>
+      <span><strong>Monday daytime (7 a.m.–5 p.m.):</strong> Visitor permits required. Purchase at automated pay stations in Parking Structure 1 (North Wilson Ave), Structure 3 (California Blvd), or Holliston Structure.</span>
+    </li>
+    <li class="flex gap-3">
+      <span class="text-[#FF6C0C] mt-1">•</span>
+      <span>Closest structures to venues: Look near Wilson Ave or California Blvd on the map.</span>
+    </li>
+  </ul>
+  <p class="mt-6 text-sm text-zinc-500">
+    Tip: The official campus map highlights all parking areas.
+  </p>
+</div>
+      <!-- Optional: Direct link to official printable PDF map (very clear with building numbers) -->
+      <div class="mt-8 text-center">
+        <a href="https://www.caltech.edu/documents/9/Campus-Map_240501.pdf" 
+           target="_blank"
+           class="text-[#FF6C0C] hover:underline text-sm inline-flex items-center gap-1">
+          <i class="fas fa-download"></i> Download Printable Campus Map (PDF)
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Detailed Program -->
+  <section id="program" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4 caltech-orange">Monday, July 20 — Full Program</h2>
+      <p class="text-center text-zinc-600 mb-12">Noyes 153 & Dabney Hall, Caltech Campus</p>
+      <div class="space-y-8">
+                <!-- Meet & Greet + Coffee -->
+        <div class="bg-white border border-zinc-200 rounded-3xl p-8">
+          <div class="flex gap-6 items-start">
+            <div class="w-24 flex-shrink-0 text-right">
+              <p class="font-mono text-[#FF6C0C] font-medium">9:00 am</p>
+            </div>
+            <div>
+              <p class="font-semibold">Meet & Greet + Coffee</p>
+              <p class="text-zinc-600">Dabney Hall – Pick up lanyards and reconnect</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Morning Scientific Talks - Expandable -->
+        <div class="bg-white border border-zinc-200 rounded-3xl p-8">
+                    <div onclick="toggleTalks(this)" class="flex gap-6 items-start cursor-pointer hover:bg-zinc-50 transition p-2 -m-2 rounded-2xl">
+            <div class="w-24 flex-shrink-0 text-right">
+              <p class="font-mono text-[#FF6C0C] font-medium">9:30 – 11:30 am</p>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="font-semibold">Scientific Talks</p>
+                  <p class="text-[#FF6C0C] text-sm font-medium">Click to expand → speaker lineup</p>
+                </div>
+                <span class="text-[#FF6C0C] text-2xl transition-transform duration-300 toggle-icon">›</span>
+              </div>
+              <p class="text-zinc-600">Noyes 153</p>
+            </div>
+          </div>
+          
+          <!-- Hidden talks list -->
+          <div class="talks-content hidden mt-6 pt-6 border-t border-zinc-100">
+            <div class="space-y-4 text-sm">
+              <div class="flex gap-4">
+                <span class="font-mono text-zinc-500 w-28 flex-shrink-0">9:30 – 10:00 am</span>
+                <span class="font-medium">Jeff Moore</span>
+              </div>
+              <div class="flex gap-4">
+                <span class="font-mono text-zinc-500 w-28 flex-shrink-0">10:00 – 10:30 am</span>
+                <span class="font-medium">Huimin Zhao</span>
+              </div>
+              <div class="flex gap-4">
+                <span class="font-mono text-zinc-500 w-28 flex-shrink-0">10:30 – 11:00 am</span>
+                <span class="font-medium text-zinc-400">TBD</span>
+              </div>
+              <div class="flex gap-4">
+                <span class="font-mono text-zinc-500 w-28 flex-shrink-0">11:00 – 11:30 am</span>
+                <span class="font-medium">Pedro Coelho</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lunch Break -->
+        <div class="bg-white border border-zinc-200 rounded-3xl p-8">
+          <div class="flex gap-6 items-start">
+            <div class="w-24 flex-shrink-0 text-right">
+              <p class="font-mono text-[#FF6C0C] font-medium">11:30 am – 2:00 pm</p>
+            </div>
+            <div>
+              <p class="font-semibold">Lunch Break & Mingling</p>
+              <p class="text-zinc-600">Taco Truck with fresh tacos and quesadillas • Lab tours available upon request</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Afternoon Scientific Talks - Expandable -->
+        <div class="bg-white border border-zinc-200 rounded-3xl p-8">
+                    <div onclick="toggleTalks(this)" class="flex gap-6 items-start cursor-pointer hover:bg-zinc-50 transition p-2 -m-2 rounded-2xl">
+            <div class="w-24 flex-shrink-0 text-right">
+              <p class="font-mono text-[#FF6C0C] font-medium">2:00 – 4:00 pm</p>
+            </div>
+            <div class="flex-1">
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="font-semibold">Scientific Talks</p>
+                  <p class="text-[#FF6C0C] text-sm font-medium">Click to expand → speaker lineup</p>
+                </div>
+                <span class="text-[#FF6C0C] text-2xl transition-transform duration-300 toggle-icon">›</span>
+              </div>
+              <p class="text-zinc-600">Noyes 153</p>
+            </div>
+          </div>
+          
+          <!-- Hidden talks list -->
+          <div class="talks-content hidden mt-6 pt-6 border-t border-zinc-100">
+            <div class="space-y-4 text-sm">
+              <div class="flex gap-4">
+                <span class="font-mono text-zinc-500 w-28 flex-shrink-0">2:00 – 2:30 pm</span>
+                <span class="font-medium">Tina Boville</span>
+              </div>
+              <div class="flex gap-4">
+                <span class="font-mono text-zinc-500 w-28 flex-shrink-0">2:30 – 3:00 pm</span>
+                <span class="font-medium">Xiongyi Huang</span>
+              </div>
+              <div class="flex gap-4">
+                <span class="font-mono text-zinc-500 w-28 flex-shrink-0">3:00 – 3:30 pm</span>
+                <span class="font-medium">Kadina Johnston</span>
+              </div>
+              <div class="flex gap-4">
+                <span class="font-mono text-zinc-500 w-28 flex-shrink-0">3:30 – 4:00 pm</span>
+                <span class="font-medium">Chenghao Liu</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Happy Hour -->
+        <div class="bg-white border border-zinc-200 rounded-3xl p-8">
+          <div class="flex gap-6 items-start">
+            <div class="w-24 flex-shrink-0 text-right">
+              <p class="font-mono text-[#FF6C0C] font-medium">4:00 – 5:00 pm</p>
+            </div>
+            <div>
+              <p class="font-semibold">Happy Hour</p>
+              <p class="text-zinc-600">Dabney Hall • Lab tours available upon request</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dinner Reception -->
+        <div class="bg-white border border-zinc-200 rounded-3xl p-8">
+          <div class="flex gap-6 items-start">
+            <div class="w-24 flex-shrink-0 text-right">
+              <p class="font-mono text-[#FF6C0C] font-medium">5:00 pm</p>
+            </div>
+            <div>
+              <p class="font-semibold">Dinner Reception</p>
+              <p class="text-zinc-600">Dabney Hall – Evening celebration with speakers and community</p>
+            </div>
+          </div>
+        </div>
+  </section>
+
+  <!-- Speakers -->
+  <section id="speakers" class="py-20 warm-bg">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4 caltech-orange">Confirmed Speakers</h2>
+      <p class="text-center text-xl mb-12">Arnold Lab members past and present presenting at the reunion</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Jeff Moore -->
+        <div class="speaker-card bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition">
+          <div class="h-96 bg-zinc-200 flex items-center justify-center text-zinc-400">
+            <p class="text-center px-6">Speaker Photo<br>Coming soon</p>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-2xl">Jeff Moore</h3>
+            <p class="text-[#FF6C0C] text-sm mb-4">Arnold Lab Alumnus</p>
+            <p class="text-zinc-600">Bio and talk title coming soon.</p>
+          </div>
+        </div>
+
+        <!-- Huimin Zhao -->
+        <div class="speaker-card bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition">
+          <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/Huimin_Zhao_2017%20compressed.jpg"
+               alt="Huimin Zhao" class="w-full h-96 object-cover">
+          <div class="p-6">
+            <h3 class="font-semibold text-2xl">Huimin Zhao</h3>
+            <p class="text-[#FF6C0C] text-sm mb-4">Steven L. Miller Chair, UIUC</p>
+            <p class="text-zinc-600 text-sm leading-relaxed">
+              Dr. Huimin Zhao is the Steven L. Miller Chair of chemical and biomolecular engineering at the University of Illinois Urbana-Champaign (UIUC), director of NSF AI Institute for Molecule Synthesis, NSF iBioFoundry, and NSF Global Center for Biofoundry Applications, and Editor in Chief of ACS Synthetic Biology. He received his B.S. in Biology from USTC and Ph.D. in Chemistry from Caltech in 1998. He has authored over 480 research articles and given over 550 invited lectures. Forty of his former students and postdocs have become professors worldwide. His research focuses on synthetic biology, artificial intelligence, and laboratory automation for health, energy, and sustainability.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pedro Coelho -->
+        <div class="speaker-card bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition">
+          <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/Pedro%20Coelho-9547RETOUCHED-FORWEB.jpg"
+               alt="Pedro Coelho" class="w-full h-96 object-cover">
+          <div class="p-6">
+            <h3 class="font-semibold text-2xl">Pedro Coelho</h3>
+            <p class="text-[#FF6C0C] text-sm mb-4">Co-founder & CBO, Provivi</p>
+            <p class="text-zinc-600 text-sm leading-relaxed">
+              Pedro Coelho, Ph.D. co-founded Provivi in 2013 together with Dr. Peter Meinhold and Prof. Frances Arnold (Nobel Laureate 2018). Provivi creates scalable, pheromone-based insect control solutions that protect crops and biodiversity while reducing farmers’ dependency on insecticides. Pedro served as CEO from 2013 to 2024 and now serves as Chief Business Officer, focusing on partnerships and growth. The company is now commercial in the US, Mexico, Europe, Indonesia, and Brazil.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tina Boville -->
+        <div class="speaker-card bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition">
+          <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/2025-10-02%20-%20Aralez%20Bio%20-%20Headshots%20-%20Tina%20Boville%20-%202174-r1_web.jpg"
+               alt="Tina Boville" class="w-full h-96 object-cover">
+          <div class="p-6">
+            <h3 class="font-semibold text-2xl">Tina Boville</h3>
+            <p class="text-[#FF6C0C] text-sm mb-4">Co-founder & CEO, Aralez Bio</p>
+            <p class="text-zinc-600 text-sm leading-relaxed">
+              Tina Boville is the co-founder and CEO of Aralez Bio, a startup that designs and manufactures noncanonical amino acids for a bio-based future. After earning her Ph.D. in biochemistry from the University of Chicago, Boville co-invented Aralez Bio’s foundational technology while conducting postdoctoral research at Caltech in the lab of Nobel Laureate Prof. Frances Arnold. Recognized as an MIT Technology Review Innovator Under 35, Activate Fellow, and Biotech Founder to Watch.
+            </p>
+          </div>
+        </div>
+
+        <!-- Xiongyi Huang -->
+        <div class="speaker-card bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition">
+          <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/XH_Pic_5-scaled.jpg"
+               alt="Xiongyi Huang" class="w-full h-96 object-cover">
+          <div class="p-6">
+            <h3 class="font-semibold text-2xl">Xiongyi Huang</h3>
+            <p class="text-[#FF6C0C] text-sm mb-4">Assistant Professor, Johns Hopkins University</p>
+            <p class="text-zinc-600 text-sm leading-relaxed">
+              Xiongyi grew up in Guilin – a small and quiet city in China known for its karst landscape. He received his B.S. Degree in Chemistry in 2010 from University of Science and Technology of China (USTC). He completed his Ph.D. in 2016 with Prof. John T. Groves at Princeton University. Xiongyi then joined the Arnold Lab at Caltech as an NIH NRSA and Pathway to Independence Postdoctoral Fellow, where he developed new-to-nature enzymatic transformations including the first enzymatic carbon–boron bond formation. He began as an Assistant Professor at Johns Hopkins University in September 2019. His research focuses on engineering metalloenzymes for new synthetic reactions. Awards include the Packard Fellowship, Camille Dreyfus Teacher-Scholar Award, and Sloan Fellowship.
+            </p>
+          </div>
+        </div>
+
+        <!-- Kadina Johnston -->
+        <div class="speaker-card bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition">
+          <div class="h-96 bg-zinc-200 flex items-center justify-center text-zinc-400">
+            <p class="text-center px-6">Speaker Photo<br>Coming soon</p>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-2xl">Kadina Johnston</h3>
+            <p class="text-[#FF6C0C] text-sm mb-4">Arnold Lab Alumna</p>
+            <p class="text-zinc-600">Bio and talk title coming soon.</p>
+          </div>
+        </div>
+
+        <!-- Chenghao Liu -->
+        <div class="speaker-card bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition">
+          <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/Chenghao.jpg"
+               alt="Chenghao Liu" class="w-full h-96 object-cover">
+          <div class="p-6">
+            <h3 class="font-semibold text-2xl">Chenghao Liu</h3>
+            <p class="text-[#FF6C0C] text-sm mb-4">FutureHouse Postdoctoral Fellow, Caltech</p>
+            <p class="text-zinc-600 text-sm leading-relaxed">
+              Chenghao is a FutureHouse postdoctoral fellow at Caltech supervised by Prof. Frances Arnold. He is working on the computational design and evolution of enzymes that perform new-to-nature chemistries. He completed his Ph.D. at McGill University supervised by Prof. Dmytro Perepichka, and he concurrently studied at Mila with Prof. Yoshua Bengio. He was also a co-founder of the protein design startup Dreamfold.
+            </p>
+          </div>
+        </div>
+  </section>
+
+  <!-- Photo Gallery -->
+  <section id="gallery" class="py-20 warm-bg">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4 caltech-orange">Photo Gallery</h2>
+      <p class="text-center text-xl mb-12">Memories from the Arnold Lab over the years</p>
+     
+      <div class="grid md:grid-cols-3 gap-6 mb-16">
+        <!-- New photos -->
+        <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/DSCF9170.JPG"
+             alt="Arnold Lab Photo" class="gallery-img rounded-2xl shadow w-full h-auto">
+        <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/DSCF9194.JPG"
+             alt="Arnold Lab Photo" class="gallery-img rounded-2xl shadow w-full h-auto">
+        <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/outside_group.jpg"
+             alt="Arnold Lab Photo" class="gallery-img rounded-2xl shadow w-full h-auto">
+
+        <!-- Existing photos -->
+        <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/IMG_7410.JPG"
+             alt="Arnold Lab Reunion Photo 1" class="gallery-img rounded-2xl shadow w-full h-auto">
+        <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/Group_photo.jpg"
+             alt="Arnold Lab Reunion Photo 2" class="gallery-img rounded-2xl shadow w-full h-auto">
+        <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/Group3.jpg"
+             alt="Arnold Lab Reunion Photo 3" class="gallery-img rounded-2xl shadow w-full h-auto">
+        <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/39356310955_fbb98f99c9_o(1).jpg"
+             alt="New Arnold Lab Photo" class="gallery-img rounded-2xl shadow w-full h-auto">
+        <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/IMG_5138.JPG"
+             alt="New Arnold Lab Photo" class="gallery-img rounded-2xl shadow w-full h-auto">
+        <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/IMG_7979%20edited.jpg"
+             alt="New Arnold Lab Photo" class="gallery-img rounded-2xl shadow w-full h-auto">
+        <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/IMG_8620.jpg"
+             alt="New Arnold Lab Photo" class="gallery-img rounded-2xl shadow w-full h-auto">
+        <img src="https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/Arnold%20Group%20010.JPG"
+             alt="New Arnold Lab Photo" class="gallery-img rounded-2xl shadow w-full h-auto">
+      </div>
+
+      <div class="text-center bg-white rounded-3xl p-12 shadow">
+        <p class="text-2xl mb-6">Upload your own photos!</p>
+        <div class="flex justify-center">
+          <div class="bg-zinc-100 p-6 rounded-2xl">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://forms.gle/YOUR-GOOGLE-FORM-LINK-HERE"
+                 alt="QR Code" class="mx-auto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-900 text-white py-12">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <p class="text-2xl mb-4">See you in Dabney Hall!</p>
+      <p class="text-zinc-400">Organized with love by the Arnold Lab community</p>
+      <p class="mt-6">
+        Contact: <strong>Sabine Brinkmann-Chen</strong><br>
+        <a href="mailto:sabine@cheme.caltech.edu" class="text-[#FF6C0C] hover:underline">sabine@cheme.caltech.edu</a>
+      </p>
+      <p class="mt-6 text-sm">
+        Also check out our <a href="https://arnoldlabreflections.caltech.edu" target="_blank" class="text-[#FF6C0C] hover:underline">2015 reunion website</a>
+      </p>
+      <div class="mt-8 text-xs text-zinc-500">Built with ❤️ by Grok</div>
+    </div>
+  </footer>
+
+  <script>
+    // Rotating hero background
+    const hero = document.getElementById('hero');
+    const images = [
+      "https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/DSCF9170.JPG",
+      "https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/DSCF9194.JPG",
+      "https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/outside_group.jpg",
+      "https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/IMG_7410.JPG",
+      "https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/Group_photo.jpg",
+      "https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/Group3.jpg",
+      "https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/39356310955_fbb98f99c9_o(1).jpg",
+      "https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/IMG_5138.JPG",
+      "https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/IMG_7979%20edited.jpg",
+      "https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/IMG_8620.jpg",
+      "https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/Arnold%20Group%20010.JPG"
+    ];
+   
+    let current = 0;
+    function rotateHero() {
+      hero.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.35)), url('${images[current]}')`;
+      current = (current + 1) % images.length;
+    }
+    rotateHero();
+    setInterval(rotateHero, 6000);
+
+    // Hamburger Menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = hamburger.querySelector('i');
+      if (icon.classList.contains('fa-bars')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+// Toggle talks sections
+    function toggleTalks(element) {
+      const content = element.parentElement.querySelector('.talks-content');
+      const icon = element.querySelector('.toggle-icon');
+      
+      content.classList.toggle('hidden');
+      
+      if (icon.textContent === '›') {
+        icon.style.transform = 'rotate(90deg)';
+      } else {
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+  </script>
+</body>
+</html>
