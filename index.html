@@ -8,9 +8,18 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
     .hero-bg {
+      position: relative;
+    }
+    .hero-slide {
+      position: absolute;
+      inset: 0;
       background-size: cover;
       background-position: center;
-      transition: background-image 1.5s ease-in-out;
+      opacity: 0;
+      transition: opacity 2s ease-in-out;
+    }
+    .hero-slide.active {
+      opacity: 1;
     }
     .caltech-orange { color: #FF6C0C; }
     .warm-bg { background-color: #FFF8F0; }
@@ -68,8 +77,10 @@
   </nav>
 
   <!-- Hero -->
-  <header id="hero" class="hero-bg h-screen flex items-center text-white relative">
-    <div class="max-w-6xl mx-auto px-6 text-center z-10">
+  <header id="hero" class="hero-bg h-screen flex items-center text-white relative overflow-hidden">
+    <div id="hero-slides"></div>
+    <div class="absolute inset-0 bg-black/30 z-10"></div>
+    <div class="max-w-6xl mx-auto px-6 text-center z-20 relative">
       <h1 class="text-5xl md:text-7xl font-bold mb-4 drop-shadow-2xl">Arnold Lab Reunion</h1>
       <p class="text-3xl md:text-5xl font-light mb-8 drop-shadow-2xl">Celebrating 35 Years of Directed Evolution</p>
       <a href="#program" class="bg-[#FF6C0C] hover:bg-orange-600 text-white px-10 py-4 rounded-full text-xl font-medium transition inline-block">
@@ -77,7 +88,6 @@
       </a>
       <p class="mt-12 text-lg drop-shadow-lg">July 19–20, 2026 • Caltech Campus, Pasadena</p>
     </div>
-    <div class="absolute inset-0 bg-black/25"></div>
   </header>
 
   <!-- Frances Arnold Section -->
@@ -285,7 +295,7 @@
               </div>
               <div class="flex gap-4">
                 <span class="font-mono text-zinc-500 w-28 flex-shrink-0">10:30 – 11:00 am</span>
-                <span class="font-medium text-zinc-400">TBD</span>
+                <span class="font-medium">Chris Otey</span>
               </div>
               <div class="flex gap-4">
                 <span class="font-mono text-zinc-500 w-28 flex-shrink-0">11:00 – 11:30 am</span>
@@ -405,6 +415,18 @@
             <p class="text-zinc-600 text-sm leading-relaxed">
               Dr. Huimin Zhao is the Steven L. Miller Chair of chemical and biomolecular engineering at the University of Illinois Urbana-Champaign (UIUC), director of NSF AI Institute for Molecule Synthesis, NSF iBioFoundry, and NSF Global Center for Biofoundry Applications, and Editor in Chief of ACS Synthetic Biology. He received his B.S. in Biology from USTC and Ph.D. in Chemistry from Caltech in 1998. He has authored over 480 research articles and given over 550 invited lectures. Forty of his former students and postdocs have become professors worldwide. His research focuses on synthetic biology, artificial intelligence, and laboratory automation for health, energy, and sustainability.
             </p>
+          </div>
+        </div>
+
+        <!-- Chris Otey -->
+        <div class="speaker-card bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition">
+          <div class="h-96 bg-zinc-200 flex items-center justify-center text-zinc-400">
+            <p class="text-center px-6">Speaker Photo<br>Coming soon</p>
+          </div>
+          <div class="p-6">
+            <h3 class="font-semibold text-2xl">Chris Otey</h3>
+            <p class="text-[#FF6C0C] text-sm mb-4">Arnold Lab Alumnus</p>
+            <p class="text-zinc-600">Bio and talk title coming soon.</p>
           </div>
         </div>
 
@@ -531,13 +553,13 @@
       <p class="mt-6 text-sm">
         Also check out our <a href="https://arnoldlabreflections.caltech.edu" target="_blank" class="text-[#FF6C0C] hover:underline">2015 reunion website</a>
       </p>
-      <div class="mt-8 text-xs text-zinc-500">Built with ❤️ by Grok</div>
+      <div class="mt-8 text-xs text-zinc-500">Built with ❤️ by Claude</div>
     </div>
   </footer>
 
   <script>
-    // Rotating hero background
-    const hero = document.getElementById('hero');
+    // Smooth crossfade hero background
+    const heroSlides = document.getElementById('hero-slides');
     const images = [
       "https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/DSCF9170.JPG",
       "https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/DSCF9194.JPG",
@@ -551,13 +573,29 @@
       "https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/IMG_8620.jpg",
       "https://raw.githubusercontent.com/fhalab/Reunion-website-2026/main/Arnold%20Group%20010.JPG"
     ];
-   
+
+    // Create a div for each image
+    const slides = images.map((url, i) => {
+      const div = document.createElement('div');
+      div.className = 'hero-slide' + (i === 0 ? ' active' : '');
+      div.style.backgroundImage = `url('${url}')`;
+      heroSlides.appendChild(div);
+      return div;
+    });
+
+    // Preload next image before transitioning
     let current = 0;
     function rotateHero() {
-      hero.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.35)), url('${images[current]}')`;
-      current = (current + 1) % images.length;
+      const next = (current + 1) % slides.length;
+      // Preload
+      const img = new Image();
+      img.src = images[next];
+      img.onload = () => {
+        slides[current].classList.remove('active');
+        slides[next].classList.add('active');
+        current = next;
+      };
     }
-    rotateHero();
     setInterval(rotateHero, 6000);
 
     // Hamburger Menu
